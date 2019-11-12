@@ -4,33 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>National Parks API</title>
   </head>
   <body>
-    <div class="container">
-      <h1>State Park finder</h1>
+    <header>
+      <h1 class="title">National Parks</h1>
+    </header>
 
-      <form id="js-form">
-        <label for="search-term">Search State</label>
-        <input type="text" name="search-term" id="js-search-term" required />
+    <main>
+      <form>
+        <label for="parks">Enter State name(s) here:</label>
+        <input type="text" name="parks" id="parks" required />
 
-        <label for="limit">Maximum results to return</label>
-        <input type="number" name="limit" id="limit" value="10" />
+        <label for="max-results">Maximum results to display:</label>
+        <input type="number" name="max-results" id="max-results" value="10" />
 
-        <input type="submit" value="Go!" />
+        <input type="submit" class="submit" value="Let's Go!" />
       </form>
 
-      <p id="js-error-message" class="error-message"></p>
+      <p class="error-message err-js"></p>
+
       <section id="results" class="hidden">
-        <h2>Search results</h2>
-        <ul id="results-list"></ul>
+        <h2>Results:</h2>
+        <ul class="list"></ul>
       </section>
-    </div>
+    </main>
+
     <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
+    <script src="store.js"></script>
   </body>
 </html>
